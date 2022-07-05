@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>  
         <title>Frontend Mentor | Product preview card component</title>
       </Head>
-      <main>
+      <main>        
         <Card/>
       </main>
      </>

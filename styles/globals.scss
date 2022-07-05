@@ -29,7 +29,7 @@ html {
 
 
 body {
-  background-color: var(--cream);
+  background-color: var(--cream);  
 }
 
 a {
@@ -51,4 +51,15 @@ address {
 ul,
 ol {
   list-style-type: none;
+}
+
+main {
+  width: 100%;
+  height: max(667px, 100vh);
+  display: grid;
+  place-items: center;
+
+  @include media(laptop){
+    height: max(800px, 100vh);
+  }
 }

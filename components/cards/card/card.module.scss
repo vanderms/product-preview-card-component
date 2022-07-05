@@ -1,0 +1,137 @@
+@use '~/styles/mixins' as *;
+@use 'sass:math';
+
+.card {
+  width: min(343px, 91.4666667%);
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include media(laptop) {
+    width: 600px;
+    display: flex;
+  }
+}
+
+.image-desktop-container {
+  display: none;
+
+  @include media(laptop) {
+    display: grid;
+    place-content: center;
+    width: 300px;
+  }
+}
+
+.image-mobile-container {
+  display: grid;
+  place-content: center;
+
+  @include media(laptop) {
+    display: none;
+  }
+}
+
+.content {
+  padding: 24px;
+
+  @include media(laptop) {
+    width: 300px;
+    padding: 32px;
+  }
+}
+
+.product {
+  font-weight: 500;
+  font-size: rem(12);
+  line-height: math.div(15, 12);
+  letter-spacing: 5px;
+  color: var(--dark-grayish-blue);
+}
+
+.title {
+  margin-top: 12px;
+  font-family: var(--fraunces);
+  font-weight: 700;
+  font-size: rem(32);
+  line-height: 1;
+  color: var(--very-dark-blue);
+
+  @include media(laptop) {
+    margin-top: 20px;
+    width: 200px;
+  }
+}
+
+.description {
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: 164%;
+  color: var(--dark-grayish-blue);
+
+  @include media(laptop) {
+    margin-top: 24px;
+  }
+}
+
+.price {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+
+  @include media(laptop) {
+    margin-top: 29px;
+  }
+}
+
+.with-discount {
+  font-family: var(--fraunces);
+  font-weight: 700;
+  font-size: rem(32);
+  line-height: 100%;
+  color: var(--dark-cyan);
+}
+
+.total-price {
+  font-weight: 500;
+  font-size: rem(13);
+  line-height: 177%;
+  text-decoration-line: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+.call-to-action {
+  margin-top: 20px;
+  width: 100%;
+  height: 48px;
+  background-color: var(--dark-cyan);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  @include media(laptop) {
+    margin-top: 30px;
+  }
+
+  &::before {
+    content: '';
+    width: 15px;
+    height: 16px;
+    background-image: url(/images/icon-cart.svg);
+  }
+
+  &:hover {
+    background: #1A4032;
+  }
+
+
+}
